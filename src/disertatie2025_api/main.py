@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from disertatie2025.routers import inventory, config, commands
-from disertatie2025.database import Base, engine
+from disertatie2025_api.routers import inventory, config, commands
+from disertatie2025_api.database import Base, engine
 
 app = FastAPI(title="Multicast VPN Automation Tool")
 Base.metadata.create_all(bind=engine)

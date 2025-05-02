@@ -18,7 +18,7 @@ print(client.get_router_by_name("CE-R2"))
 # Update a router
 print(client.update_router("CE-R2", site="SiteC"))
 
-# Delete a router
+# # Delete a router
 print(client.delete_router("CE-R2"))
 
 

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from disertatie2025.database import SessionLocal, RouterModel
-from disertatie2025.schemas import RouterInput, RouterUpdate
+from disertatie2025_api.database import SessionLocal, RouterModel
+from disertatie2025_api.schemas import RouterInput, RouterUpdate
 
 router = APIRouter()
 

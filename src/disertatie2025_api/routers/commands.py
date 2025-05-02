@@ -1,8 +1,9 @@
 from fastapi import APIRouter, HTTPException, Depends
-from disertatie2025.schemas import CommandRequest
+from disertatie2025_api.schemas import CommandRequest
 from sqlalchemy.orm import Session
-from disertatie2025.services.ssh import run_command
-from disertatie2025.database import SessionLocal, RouterModel
+from disertatie2025_api.services.ssh import run_command
+from disertatie2025_api.database import SessionLocal, RouterModel
+
 
 router = APIRouter()
 
