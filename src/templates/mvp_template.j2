@@ -1,0 +1,8 @@
+router bgp {{ bgp_as }}
+ address-family ipv4 multicast
+  neighbor {{ neighbor_ip }} activate
+!
+interface Loopback0
+ ip pim sparse-mode
+!
+ip pim rp-address {{ rp_ip }}
