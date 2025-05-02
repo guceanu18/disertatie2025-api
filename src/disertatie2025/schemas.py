@@ -6,6 +6,11 @@ class RouterInput(BaseModel):
     mgmt_ip: str
     site: str
 
+class RouterUpdate(BaseModel):
+    name: Optional[str] = None
+    mgmt_ip: Optional[str] = None
+    site: Optional[str] = None
+
 class CommandRequest(BaseModel):
     router_name: str
     command: str
