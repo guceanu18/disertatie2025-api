@@ -21,6 +21,6 @@ def push_router_config(data: ConfigPushRequest, db: Session = Depends(get_db)):
     if not target:
         raise HTTPException(status_code=404, detail="Router not found")
 
-    config = render_template("mvpn_template.j2", data.template_vars)
+    config = render_template(data.template_name, data.template_vars)
     result = push_config(target.mgmt_ip, config)
     return {"result": result}

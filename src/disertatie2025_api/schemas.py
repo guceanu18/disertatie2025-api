@@ -18,3 +18,4 @@ class CommandRequest(BaseModel):
 class ConfigPushRequest(BaseModel):
     router_name: str
     template_vars: dict
+    template_name: str
