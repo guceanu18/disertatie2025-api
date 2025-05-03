@@ -1,6 +1,8 @@
 {% if mgmt_ip and mgmt_lan_ip %}
 ! Static NAT mapping for {{ mgmt_ip }} -> {{ mgmt_lan_ip }} in VRF C1
 ip nat inside source static {{ mgmt_ip }} {{ mgmt_lan_ip }} vrf C1
+interface e1/1
+ip add {{ mgmt_lan_ip }} 255.255.255.0 secondary
 !
 ! Verify configuration
 do show ip nat translations vrf C1
